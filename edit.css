@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
 }
 
 body {
     height: 100vh;
-    background-image: linear-gradient(120deg, #ffe53bd8, #ff2525da);
+    background: linear-gradient(120deg, #e85e0e, #521f1f);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,31 +21,50 @@ body {
     justify-content: space-around;
     height: 200px;
     width: 550px;
-    background: transparent;
-    border-radius: 3px;
-    box-shadow: 0px 8px 10px rgba( 0, 0, 0, .5);
-
+    padding: 30px;
 }
 
-.relogio div {
-    height: 170px;
-    width: 150px;
+.relogio .box {
+    height: 160px;
+    width: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    background: rgba(5, 5, 5, .9);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
-    border-radius: 10px;
+    color: #191919;
+    background-color: #e3e61a;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, .9);
+    border-radius: 7px;
     letter-spacing: 3px;
 }
 
-.relogio span {
-    font-weight: bolder;
-    font-size: 60px;
+.relogio .box.seconds {
+    background-color: #ad5613;
 }
 
-.relogio span.tempo{
-    font-size: 10px;
+.relogio span {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.relogio span.time {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 500px) {
+    .clock .box {
+        height: 100px;
+        width: 95px;
+        margin-top: -15%;
+    }
+
+    .clock span {
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    .clock span.time {
+        font-size: 12px;
+    }
+
 }

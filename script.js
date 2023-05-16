@@ -1,20 +1,16 @@
-const horas = document.querySelector('horas');
-const minutos = document.querySelector('minutos');
-const segundos = document.querySelector('segundos');
 
-const relogio = setInterval(function time() {
+const time = setInterval(() =>{
     let dateToday = new Date();
-    let hr = dateToday.getHours();
-    let min = dateToday.getMinutes();
-    let s = dateToday.getSeconds();
+    let hour = dateToday.getHours();
+    let minutes = dateToday.getMinutes();
+    let seconds = dateToday.getSeconds();
 
-    if (hr < 10) hr = '0' + hr;
+    if(hour < 10) hour = "0" + hour;
+    if(minutes < 10) minutes = "0" + minutes;
+    if(seconds < 10) seconds = "0" + seconds;
 
-    if (min < 10) min = '0' + min;
+    document.getElementById("hour").innerHTML = hour;
+    document.getElementById("minute").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
-    if (s < 10) s = '0' + s;
-
-    horas.textContent = hr;
-    minutos.textContent = min;
-    segundos.textContent = s;
 })
